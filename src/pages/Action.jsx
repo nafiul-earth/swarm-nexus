@@ -25,7 +25,7 @@ export default function Action() {
       {/* GenUI state bar */}
       <Tile className="gn-tile mt-2" style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', borderLeft: '3px solid #8a3ffc' }}>
         <span className="gn-genui-badge">GENUI · v2.1 · composed</span>
-        <span className="muted" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 }}>
+        <span className="muted" style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11 }}>
           {['auto-execute · high-conf · 4 widgets', 'hold · evidence-required · 5 widgets', 'escalate · human-in-loop · 6 widgets'][posture]}
         </span>
         <div style={{ marginLeft: 'auto' }}>
@@ -119,7 +119,7 @@ export default function Action() {
           {/* Posture-specific widgets (HOLD = evidence form, ESCALATE = approval form) */}
           {posture === 1 && (
             <Tile className="gn-tile" style={{ background: 'rgba(241,194,27,0.04)' }}>
-              <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.14em', color: '#b28600' }}>EVIDENCE REQUEST · GENUI WIDGET</div>
+              <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: '#b28600' }}>EVIDENCE REQUEST · GENUI WIDGET</div>
               <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 6 }}>
                 Mesh requires confirmation that Newark DC has 4,200 units of matching SKU before approving partial ship.
               </div>
@@ -129,7 +129,7 @@ export default function Action() {
 
           {posture === 2 && (
             <Tile className="gn-tile" style={{ background: 'rgba(218,30,40,0.04)' }}>
-              <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.14em', color: '#da1e28' }}>ESCALATION · GENUI WIDGET</div>
+              <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: '#da1e28' }}>ESCALATION · GENUI WIDGET</div>
               <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 6 }}>
                 Routed to <strong>A. Singh, Senior Operations Manager</strong>. SLA: 30 minutes.
               </div>
@@ -141,7 +141,7 @@ export default function Action() {
           )}
 
           <Tile className="gn-tile" style={{ background: 'var(--cds-layer-accent-01)' }}>
-            <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>POLICY COMPLIANCE</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>POLICY COMPLIANCE</div>
             <div className="flex gap-1 flex-wrap mt-2">
               <Tag type="green" size="sm">Customer SLA v4.2 · §3.1, §4.2</Tag>
               <Tag type="green" size="sm">Cost-to-Serve v2.1 · §1.1</Tag>
@@ -183,7 +183,7 @@ export default function Action() {
 
       <Tile className="gn-tile mt-4" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
         <div>
-          <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>NEXT</div>
+          <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>NEXT</div>
           <div style={{ fontWeight: 500 }}>After dispatch, the case lands in Replay & Audit for sign-off.</div>
         </div>
         <Button kind="primary" renderIcon={ArrowRight} onClick={() => navigate('/replay')}>Open Replay & Audit</Button>

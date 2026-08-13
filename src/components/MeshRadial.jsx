@@ -62,16 +62,16 @@ export default function MeshRadial() {
         {SATELLITES.map(s => (
           <div className="row" key={s.name}>
             <span className="bar" style={{ background: s.color }} />
-            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 12, color: '#161616', letterSpacing: '0.04em' }}>{s.name}</span>
+            <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 12, color: '#161616', letterSpacing: '0.04em' }}>{s.name}</span>
             <span style={{ color: 'var(--cds-text-secondary)', fontSize: 13 }}>{s.proposal}</span>
-            <span style={{ fontFamily: 'IBM Plex Mono, monospace', textAlign: 'right', fontWeight: 600 }}>{s.score}</span>
+            <span style={{ fontFamily: 'var(--gn-font-mono)', textAlign: 'right', fontWeight: 600 }}>{s.score}</span>
           </div>
         ))}
         <div className="row winner">
           <span className="bar" style={{ background: '#24a148' }} />
-          <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 12, color: '#24a148', letterSpacing: '0.04em' }}>ARBITRATED</span>
+          <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 12, color: '#24a148', letterSpacing: '0.04em' }}>ARBITRATED</span>
           <span style={{ color: 'var(--cds-text-secondary)', fontSize: 13 }}>Recovery (primary) + CX (outreach) — Cost suppressed by SLA policy</span>
-          <span style={{ fontFamily: 'IBM Plex Mono, monospace', textAlign: 'right', fontWeight: 600, color: '#24a148' }}>0.91</span>
+          <span style={{ fontFamily: 'var(--gn-font-mono)', textAlign: 'right', fontWeight: 600, color: '#24a148' }}>0.91</span>
         </div>
       </div>
     </div>

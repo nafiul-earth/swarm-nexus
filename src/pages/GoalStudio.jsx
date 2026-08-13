@@ -17,7 +17,7 @@ export default function GoalStudio() {
           <div className="subtitle">Author goals, KPIs, data sources, and knowledge bases. Watch them compile into the live causal DAG.</div>
         </div>
         <div className="flex gap-1 flex-wrap">
-          <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: '#24a148' }}>DAG · 47 nodes · 96 edges · ✓ valid · last compile 2s ago</span>
+          <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: '#24a148' }}>DAG · 47 nodes · 96 edges · ✓ valid · last compile 2s ago</span>
           <Button kind="primary" renderIcon={ArrowRight} onClick={() => navigate('/workspace')}>Materialize to runtime</Button>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function GoalStudio() {
                 <li>Tier-1 SLAs immutable</li>
               </ul>
             </div>
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', borderTop: '1px dashed var(--cds-border-subtle)', paddingTop: 8 }}>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', borderTop: '1px dashed var(--cds-border-subtle)', paddingTop: 8 }}>
               On save → +8 nodes / +14 edges to DAG · <a href="#" style={{ color: '#0f62fe' }}>Preview impact</a>
             </div>
           </Tile>
@@ -99,7 +99,7 @@ export default function GoalStudio() {
                 <div className="flex" style={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div>
                     <div style={{ fontWeight: 500, fontSize: '0.875rem' }}>{g.name}</div>
-                    <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 2 }}>{g.id}</div>
+                    <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 2 }}>{g.id}</div>
                   </div>
                   <span className={`gn-provenance-pill ${g.provenance}`}>
                     {g.provenance === 'policy' ? 'policy-derived' : g.provenance === 'user' ? 'user-authored' : 'hybrid'}
@@ -125,7 +125,7 @@ export default function GoalStudio() {
         {/* AI Assist */}
         <Column sm={4} md={4} lg={4}>
           <div className="gn-section-title">AI Assist · Studio Copilot</div>
-          <div className="muted" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, marginBottom: 12 }}>
+          <div className="muted" style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, marginBottom: 12 }}>
             Suggestions are auto-generated, never auto-applied.
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -146,7 +146,7 @@ export default function GoalStudio() {
           </div>
 
           <Tile className="gn-tile mt-3">
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>RUNTIME PREVIEW</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>RUNTIME PREVIEW</div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 6 }}>
               This DAG drives 23 active flows across 47 production agents. Last materialization: 2s ago.
             </div>
@@ -157,7 +157,7 @@ export default function GoalStudio() {
 
       {/* Sticky bottom-bar */}
       <div className="flex-between mt-4" style={{ padding: 12, background: 'var(--cds-layer-accent-01)', border: '1px solid var(--cds-border-subtle)' }}>
-        <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 12, color: '#24a148' }}>● Unsaved edits: 3 · auto-save in 4s</span>
+        <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 12, color: '#24a148' }}>● Unsaved edits: 3 · auto-save in 4s</span>
         <div className="flex gap-1">
           <Button kind="tertiary">Validate DAG</Button>
           <Button renderIcon={Save} kind="primary">Materialize to runtime</Button>

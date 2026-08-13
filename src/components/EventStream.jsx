@@ -42,7 +42,7 @@ export default function EventStream({ onSelect }) {
           <span>LIVE EVENT STREAM</span>
           <span style={{ color: 'var(--cds-text-secondary)', marginLeft: 8 }}>· 47 events / min</span>
         </div>
-        <div style={{ display: 'flex', gap: 6, fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)' }}>
+        <div style={{ display: 'flex', gap: 6, fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)' }}>
           <span style={{ background: '#0f62fe', color: '#fff', padding: '2px 8px' }}>All</span>
           <span style={{ padding: '2px 8px' }}>Lost</span>
           <span style={{ padding: '2px 8px' }}>SLA breach</span>
@@ -66,7 +66,7 @@ export default function EventStream({ onSelect }) {
         </div>
       ))}
       {events[0]?.sub && (
-        <div style={{ padding: '0.5rem 1rem 0.875rem 2rem', fontFamily: 'IBM Plex Mono, monospace', fontSize: 12, color: '#0f62fe', borderBottom: '1px solid var(--cds-border-subtle)' }}>
+        <div style={{ padding: '0.5rem 1rem 0.875rem 2rem', fontFamily: 'var(--gn-font-mono)', fontSize: 12, color: '#0f62fe', borderBottom: '1px solid var(--cds-border-subtle)' }}>
           {events[0].sub}
         </div>
       )}

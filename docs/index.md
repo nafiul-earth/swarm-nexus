@@ -1,0 +1,23 @@
+---
+layout: home
+hero:
+  name: GoalNexus
+  text: Business coordination, not a chain of agents.
+  tagline: A five-stage method — delegate, assess, decide, execute, compound — expressed as a Carbon React runtime.
+  actions:
+    - theme: brand
+      text: Get started
+      link: /guide/getting-started
+    - theme: alt
+      text: Build and preview
+      link: /publish
+features:
+  - title: Delegate the outcome
+    details: Humans set the goal, deadline, and weighted trade-offs. Nothing in the runtime overrides those weights.
+  - title: Assess the mode
+    details: Known path runs as a workflow. Unknown path switches to elicitation until policy, KPIs, and constraints are captured.
+  - title: Decide with arbitration
+    details: Plans are scored against human KPI weights. Conflicts are suppressed, merged, or escalated — and logged.
+  - title: Execute with control
+    details: The chosen plan runs while you watch, intervene, redirect, or override. Every intervention is a first-class event.
+---

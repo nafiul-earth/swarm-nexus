@@ -25,13 +25,13 @@ export default function GoalEngine() {
         <div>
           <div className="flex" style={{ alignItems: 'center', gap: 8, marginBottom: 12 }}>
             <Document />
-            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.16em', color: 'var(--cds-text-secondary)' }}>BUSINESS POLICIES</span>
+            <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.16em', color: 'var(--cds-text-secondary)' }}>BUSINESS POLICIES</span>
           </div>
           <div className="gn-prov-stack">
             {POLICIES.map(p => (
               <Tile key={p.name} className={`gn-tile ${p.highlighted ? 'accent-blue' : ''}`}>
                 <div style={{ fontWeight: 500 }}>{p.name}</div>
-                <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 4 }}>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 4 }}>
                   {p.owner} · {p.age} · <Tag size="sm" type="green">{p.status}</Tag>
                   {p.isNew && <Tag size="sm" type="blue" style={{ marginLeft: 6 }}>NEW</Tag>}
                 </div>
@@ -45,11 +45,11 @@ export default function GoalEngine() {
           <Tile className="gn-tile" style={{ borderLeft: '3px solid #8a3ffc' }}>
             <div className="flex" style={{ alignItems: 'center', gap: 8 }}>
               <MachineLearningModel />
-              <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.16em', color: '#8a3ffc' }}>POLICY AGENT</span>
+              <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.16em', color: '#8a3ffc' }}>POLICY AGENT</span>
             </div>
             <div style={{ fontWeight: 500, marginTop: 6 }}>policy-extractor-v2.4</div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 4 }}>Reads policies, extracts measurable KPIs.</div>
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 8 }}>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 8 }}>
               Last refit 6h ago · 142 KPIs derived from 5 policies
             </div>
             <Button size="sm" kind="ghost" style={{ marginTop: 8 }}>Run re-ingestion</Button>
@@ -60,7 +60,7 @@ export default function GoalEngine() {
             {KPI_DERIVED.map(k => (
               <Tile key={k.name} className={`gn-tile ${k.highlighted ? 'accent-blue' : ''}`}>
                 <div style={{ fontWeight: 500, fontSize: '0.875rem' }}>{k.name}</div>
-                <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 4 }}>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 4 }}>
                   {k.from} · target {k.target}
                 </div>
               </Tile>
@@ -72,12 +72,12 @@ export default function GoalEngine() {
         <div>
           <div className="flex" style={{ alignItems: 'center', gap: 8, marginBottom: 12 }}>
             <Flag />
-            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.16em', color: 'var(--cds-text-secondary)' }}>ACTIVE GOALS</span>
+            <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.16em', color: 'var(--cds-text-secondary)' }}>ACTIVE GOALS</span>
           </div>
           <div className="gn-prov-stack">
             {GOALS.map(g => (
               <Tile key={g.id} className={`gn-tile ${g.highlighted ? 'accent-blue' : ''}`}>
-                <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)' }}>{g.id}</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)' }}>{g.id}</div>
                 <div style={{ fontWeight: 500, marginTop: 4 }}>{g.name}</div>
                 <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 4 }}>{g.owner}</div>
 
@@ -94,7 +94,7 @@ export default function GoalEngine() {
                   </div>
                 )}
                 {g.highlighted && (
-                  <div style={{ marginTop: 12, paddingTop: 8, borderTop: '1px dashed var(--cds-border-subtle)', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: '#24a148' }}>
+                  <div style={{ marginTop: 12, paddingTop: 8, borderTop: '1px dashed var(--cds-border-subtle)', fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: '#24a148' }}>
                     {g.status}
                   </div>
                 )}
@@ -118,17 +118,17 @@ export default function GoalEngine() {
                 </div>
               </FormGroup>
               <div className="mt-3">
-                <div className="label" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>TIME HORIZON</div>
+                <div className="label" style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>TIME HORIZON</div>
                 <div>By Nov 14, 2026 · 201 days remaining</div>
               </div>
               <div className="mt-3">
-                <div className="label" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>EVENT TRIGGERS</div>
+                <div className="label" style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>EVENT TRIGGERS</div>
                 <div className="flex gap-1 flex-wrap mt-1">
                   {goal.triggers.map(t => <Tag key={t} type="blue" size="sm">{t}</Tag>)}
                 </div>
               </div>
               <div className="mt-3">
-                <div className="label" style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>CONSTRAINTS</div>
+                <div className="label" style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>CONSTRAINTS</div>
                 <ul style={{ marginTop: 4, paddingLeft: 18 }}>
                   <li>Cost ceiling ≤ $4.10 / unit</li>
                   <li>Safety stock ≥ 14 days</li>
@@ -139,7 +139,7 @@ export default function GoalEngine() {
           </Column>
           <Column sm={4} md={3} lg={7}>
             <Tile className="gn-tile">
-              <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>POLICY EXCERPT</div>
+              <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', letterSpacing: '0.14em' }}>POLICY EXCERPT</div>
               <div style={{ fontWeight: 500, marginTop: 4 }}>Customer SLA Policy v4.2, Clause 3.1</div>
               <blockquote style={{ borderLeft: '3px solid #0f62fe', background: 'rgba(15,98,254,0.04)', padding: '0.75rem 1rem', margin: '0.75rem 0 0', fontStyle: 'italic', color: 'var(--cds-text-primary)' }}>
                 "All Tier-1 customer shipments shall be measured against an On-Time In-Full standard of no less than{' '}
@@ -147,7 +147,7 @@ export default function GoalEngine() {
                 with recovery actions for missed shipments initiated within{' '}
                 <span style={{ background: 'rgba(15,98,254,0.18)', padding: '0 4px' }}>30 minutes of detection</span>..."
               </blockquote>
-              <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 8 }}>
+              <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)', marginTop: 8 }}>
                 Extracted: 1 KPI · 1 SLA constraint · 1 trigger condition
               </div>
             </Tile>

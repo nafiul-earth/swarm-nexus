@@ -73,7 +73,7 @@ export default function AppShell({ children }) {
               </HeaderName>
               <div style={{ marginLeft: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Tag size="sm" type="blue">Workspace · M. Patel</Tag>
-                <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.75rem', color: '#c6c6c6' }}>
+                <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: '0.75rem', color: '#c6c6c6' }}>
                   4 goals · 5 asks for you · 23 agents
                 </span>
               </div>

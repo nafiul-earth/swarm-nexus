@@ -1,0 +1,18 @@
+:root {
+  --vp-c-brand-1: #33b1ff;
+  --vp-c-brand-2: #78a9ff;
+  --vp-c-brand-3: #0f62fe;
+  --vp-c-brand-soft: rgba(51, 177, 255, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #33b1ff 10%, #78a9ff 90%);
+}
+
+.dark {
+  --vp-c-bg: #0b1220;
+  --vp-c-bg-alt: #0f172a;
+  --vp-c-bg-elv: #111827;
+}
+
+.VPHero .name {
+  letter-spacing: -0.03em;
+}

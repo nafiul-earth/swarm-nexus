@@ -59,7 +59,7 @@ export default function Operations() {
                       onClick={() => navigate(f.name === 'Lost-Shipment Recovery' ? '/workspace' : '/mesh')}>
                     <td style={{ padding: '0.5rem 0.75rem' }}>
                       <div style={{ fontWeight: 500 }}>{f.name}</div>
-                      <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.6875rem', color: 'var(--cds-text-secondary)' }}>{f.goal} · {f.last}</div>
+                      <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: '0.6875rem', color: 'var(--cds-text-secondary)' }}>{f.goal} · {f.last}</div>
                     </td>
                     <td style={{ padding: '0.5rem 0.75rem' }}>
                       <Tag size="sm" type={
@@ -69,7 +69,7 @@ export default function Operations() {
                         f.tone === 'red' ? 'red' : 'gray'
                       }>{f.status}</Tag>
                     </td>
-                    <td style={{ padding: '0.5rem 0.75rem', textAlign: 'right', fontFamily: 'IBM Plex Mono, monospace', fontWeight: 500 }}>{f.conf.toFixed(2)}</td>
+                    <td style={{ padding: '0.5rem 0.75rem', textAlign: 'right', fontFamily: 'var(--gn-font-mono)', fontWeight: 500 }}>{f.conf.toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -80,23 +80,23 @@ export default function Operations() {
           <Tile className="gn-tile">
             <div className="flex-between">
               <div>
-                <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.12em', color: 'var(--cds-text-secondary)' }}>GLOBAL POSTURE</div>
-                <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 24, color: '#0f62fe', fontWeight: 500 }}>{THROTTLE.needle.toFixed(2)} · AUTO</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.12em', color: 'var(--cds-text-secondary)' }}>GLOBAL POSTURE</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 24, color: '#0f62fe', fontWeight: 500 }}>{THROTTLE.needle.toFixed(2)} · AUTO</div>
               </div>
               <Button size="sm" kind="ghost" renderIcon={ArrowRight} onClick={() => navigate('/mesh')}>Open Decision Mesh</Button>
             </div>
             <div className="mt-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }}>
               <div className="gn-tile" style={{ borderLeft: '3px solid #24a148' }}>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>AUTO-RESOLVED · 1H</div>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 20, fontWeight: 500 }}>{THROTTLE.autoResolved}</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>AUTO-RESOLVED · 1H</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 20, fontWeight: 500 }}>{THROTTLE.autoResolved}</div>
               </div>
               <div className="gn-tile" style={{ borderLeft: '3px solid #f1c21b' }}>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>HELD FOR CLARITY</div>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 20, fontWeight: 500 }}>{THROTTLE.held}</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>HELD FOR CLARITY</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 20, fontWeight: 500 }}>{THROTTLE.held}</div>
               </div>
               <div className="gn-tile" style={{ borderLeft: '3px solid #da1e28' }}>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>ESCALATED</div>
-                <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 20, fontWeight: 500 }}>{THROTTLE.escalated}</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.12em', color: '#525252' }}>ESCALATED</div>
+                <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 20, fontWeight: 500 }}>{THROTTLE.escalated}</div>
               </div>
             </div>
           </Tile>

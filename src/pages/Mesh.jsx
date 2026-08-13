@@ -24,18 +24,18 @@ export default function Mesh() {
       <Grid condensed narrow fullWidth>
         <Column sm={4} md={4} lg={5}>
           <Tile className="gn-tile">
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>ARBITRATION STATUS</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>ARBITRATION STATUS</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
               <span style={{ width: 8, height: 8, borderRadius: 999, background: '#0f62fe', boxShadow: '0 0 0 4px rgba(15,98,254,0.18)' }} />
-              <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 18, fontWeight: 500 }}>ARBITRATING</span>
+              <span style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 18, fontWeight: 500 }}>ARBITRATING</span>
             </div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 4 }}>3 agent proposals · 2 conflicts · 1 dominant solution emerging</div>
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 22, marginTop: 8, color: '#0f62fe' }}>00:00:04</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 22, marginTop: 8, color: '#0f62fe' }}>00:00:04</div>
           </Tile>
         </Column>
         <Column sm={4} md={4} lg={6}>
           <Tile className="gn-tile">
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>POLICY GUARDRAILS</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>POLICY GUARDRAILS</div>
             <div className="flex gap-1 flex-wrap mt-2">
               <Tag type="green" size="sm">Cost ceiling $20K · OK</Tag>
               <Tag type="green" size="sm">Tier-1 SLA · OK</Tag>
@@ -47,8 +47,8 @@ export default function Mesh() {
         </Column>
         <Column sm={4} md={4} lg={5}>
           <Tile className="gn-tile">
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>MIN HUMAN-IN-LOOP</div>
-            <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 32, fontWeight: 500, color: '#0f62fe', marginTop: 4 }}>94%</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--cds-text-secondary)' }}>MIN HUMAN-IN-LOOP</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 32, fontWeight: 500, color: '#0f62fe', marginTop: 4 }}>94%</div>
             <div className="muted" style={{ fontSize: '0.8125rem' }}>Of similar cases auto-resolved last 30 days.</div>
             <div style={{ display: 'flex', height: 8, marginTop: 8, gap: 1 }}>
               <div style={{ flex: 94, background: '#24a148' }} />
@@ -67,7 +67,7 @@ export default function Mesh() {
         <Column sm={4} md={3} lg={6}>
           <ThrottleGauge value={0.91} animated={false} />
           <Tile className="gn-tile mt-3" style={{ borderLeft: '3px solid #24a148' }}>
-            <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, color: '#24a148', letterSpacing: '0.14em' }}>CURRENT POSTURE</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: '#24a148', letterSpacing: '0.14em' }}>CURRENT POSTURE</div>
             <div style={{ fontWeight: 500, marginTop: 4 }}>AUTO-EXECUTE · dispatching in 12s</div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 4 }}>Recommendation will dispatch unless paused.</div>
             <div className="flex gap-1 mt-2">
@@ -87,7 +87,7 @@ export default function Mesh() {
               <tbody>
                 {ARBITRATION_LOG.map((row, i) => (
                   <tr key={i} style={{ borderTop: i ? '1px solid var(--cds-border-subtle)' : 'none' }}>
-                    <td style={{ padding: '0.5rem 0.75rem', fontFamily: 'IBM Plex Mono, monospace', color: 'var(--cds-text-secondary)', fontSize: 11, width: 90 }}>{row.ts}</td>
+                    <td style={{ padding: '0.5rem 0.75rem', fontFamily: 'var(--gn-font-mono)', color: 'var(--cds-text-secondary)', fontSize: 11, width: 90 }}>{row.ts}</td>
                     <td style={{ padding: '0.5rem 0.75rem', width: 110 }}>
                       <Tag size="sm" type={KIND_TONE[row.kind] || 'gray'}>[{row.kind}]</Tag>
                     </td>
@@ -101,12 +101,12 @@ export default function Mesh() {
         <Column sm={4} md={4} lg={6}>
           <div className="gn-section-title">Winning decision</div>
           <Tile className="gn-tile" style={{ borderLeft: '3px solid #24a148' }}>
-            <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, letterSpacing: '0.14em', color: '#24a148' }}>ARBITRATED OUTCOME</div>
+            <div style={{ fontFamily: 'var(--gn-font-mono)', fontSize: 11, letterSpacing: '0.14em', color: '#24a148' }}>ARBITRATED OUTCOME</div>
             <div style={{ fontWeight: 500, fontSize: '1rem', marginTop: 6 }}>
               Hybrid: Recovery (primary) + CX (secondary outreach)
             </div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 6 }}>
-              Composite confidence: <span style={{ color: '#0f62fe', fontFamily: 'IBM Plex Mono, monospace', fontWeight: 600 }}>0.91</span>
+              Composite confidence: <span style={{ color: '#0f62fe', fontFamily: 'var(--gn-font-mono)', fontWeight: 600 }}>0.91</span>
             </div>
             <div className="muted" style={{ fontSize: '0.8125rem', marginTop: 4 }}>
               Mesh boosted Recovery confidence by +0.04 via CX alignment.

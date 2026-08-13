@@ -55,7 +55,7 @@ export default function ThrottleGauge({ value = 0.91, animated = true }) {
       </div>
       <div style={{
         display: 'flex', justifyContent: 'space-between', gap: 6, width: '100%',
-        fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: 'var(--cds-text-secondary)',
+        fontFamily: 'var(--gn-font-mono)', fontSize: 11, color: 'var(--cds-text-secondary)',
         borderTop: '1px dashed var(--cds-border-subtle)', paddingTop: 8
       }}>
         <span style={{ color: '#24a148' }}>≥ 0.85 · auto</span>
