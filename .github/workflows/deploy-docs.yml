@@ -1,0 +1,58 @@
+# Build VitePress and publish the static site to the gh-pages branch.
+#
+# After the first successful run:
+#   Settings → Pages → Source: Deploy from a branch → gh-pages / (root)
+# Site: https://nafiul-earth.github.io/swarm-nexus/
+
+name: Deploy VitePress to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build docs
+        run: npm run docs:build
+        env:
+          VP_BASE: /swarm-nexus/
+
+      - name: Add .nojekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
+      - name: Publish gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          WORK=$(mktemp -d)
+          cp -a docs/.vitepress/dist/. "$WORK"/
+          cd "$WORK"
+          git init
+          git add -A
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Deploy VitePress docs'
+          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages

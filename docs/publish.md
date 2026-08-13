@@ -1,15 +1,15 @@
-# Build and preview locally
+# Build, preview, and publish
 
-This repo ships a **VitePress docs site** next to the React app. Run it on your machine. GitHub Pages can wait until you have a public remote.
+This repo ships a **VitePress docs site** next to the React app.
 
-## Develop
+## Develop locally
 
 ```bash
 npm install
 npm run docs:dev
 ```
 
-Opens at `http://localhost:5173`.
+Opens at `http://localhost:5173`. Local `base` is `/`.
 
 ## Production preview
 
@@ -18,7 +18,7 @@ npm run docs:build
 npm run docs:preview
 ```
 
-`docs:build` writes static files to `docs/.vitepress/dist`. `docs:preview` serves that folder so you can check the same output GitHub Pages would host later.
+`docs:build` writes static files to `docs/.vitepress/dist`.
 
 | Script | What it does |
 | --- | --- |
@@ -26,10 +26,17 @@ npm run docs:preview
 | `npm run docs:build` | Static HTML in `docs/.vitepress/dist` |
 | `npm run docs:preview` | Serve the built site locally |
 
-## Later: GitHub Pages
+## GitHub Pages (`gh-pages`)
 
-When you are ready to publish to GitHub Pages:
+Pushes to `main` run `.github/workflows/deploy-docs.yml`. That job builds the docs with `VP_BASE=/swarm-nexus/` and force-pushes the output to the `gh-pages` branch.
 
-1. Set `base` in `docs/.vitepress/config.mjs` to `/<repo>/` for a project site, or leave `/` for a user/org site.
-2. Add a GitHub Actions workflow from the [VitePress deploy guide](https://vitepress.dev/guide/deploy#github-pages).
-3. In the repo: **Settings → Pages → Source → GitHub Actions**.
+Enable Pages once:
+
+1. Repo **Settings → Pages**
+2. Source: **Deploy from a branch**
+3. Branch: `gh-pages`, folder: `/ (root)`
+4. Save
+
+Site: `https://nafiul-earth.github.io/swarm-nexus/`
+
+You can also run the workflow by hand from the **Actions** tab.
