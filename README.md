@@ -1,4 +1,4 @@
-# GoalNexus app
+# SWarmNexus app
 
 Carbon React runtime for GoalNexus — a method for business coordination (delegate, assess, decide, execute, compound).
 
